@@ -1,0 +1,32 @@
+[project]
+name = "primal-dual-path"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "reverdat", email = "arnauperezre@gmail.com" }
+]
+dependencies = [
+    "numpy>=2.2.5",
+    "scipy>=1.15.2",
+    "ipykernel>=6.29.5",
+    "pytest>=8.3.5",
+    "amplpy>=0.14.0",
+    "scikit-sparse>=0.4.16",
+    "scikit-umfpack>=0.4.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/primal_dual_path"]
